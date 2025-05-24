@@ -9,7 +9,7 @@ function App() {
   const [error, setError] = useState('');
 
   // Replace this token with your actual token
-  const token = 'your_access_token_here';
+  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzQ4MDcxNDMyLCJpYXQiOjE3NDgwNzExMzIsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjExNzQzN2UwLWE4ZDAtNDNhZC1iODE3LTE0YmI4NmY1ZjdhNCIsInN1YiI6IjkyNzYyMmJjYjA0OEBta2NlLmFjLmluIn0sImVtYWlsIjoiOTI3NjIyYmNiMDQ4QG1rY2UuYWMuaW4iLCJuYW1lIjoic2hhcnVsYXRoYSByIiwicm9sbE5vIjoiOTI3NjIyYmNiMDQ4IiwiYWNjZXNzQ29kZSI6IndoZVFVeSIsImNsaWVudElEIjoiMTE3NDM3ZTAtYThkMC00M2FkLWI4MTctMTRiYjg2ZjVmN2E0IiwiY2xpZW50U2VjcmV0IjoiUFVTdEdxeEdaTmdmTnZKaiJ9.08lljFpDr2HM9Pu2LQsHQgkxDuTPYCm5meyE77hSLqg';
 
   const fetchAverage = async () => {
     if (!numberId.trim()) {
