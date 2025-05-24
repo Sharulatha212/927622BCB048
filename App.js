@@ -8,6 +8,9 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+  // Replace this token with your actual token
+  const token = 'your_access_token_here';
+
   const fetchAverage = async () => {
     if (!numberId.trim()) {
       setError('Please enter a valid ID');
@@ -19,7 +22,13 @@ function App() {
     setResponseData(null);
 
     try {
-      const response = await fetch(`http://localhost:9876/numbers/${numberId}`);
+      const response = await fetch(`http://localhost:9876/numbers/${numberId}`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
       if (!response.ok) throw new Error('Network response was not ok');
       const data = await response.json();
       setResponseData(data);
